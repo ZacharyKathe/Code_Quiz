@@ -8,7 +8,7 @@ var questionArray = [
     correctAnswer: "Made 3 under par for the hole",
 },
 {
-    question2: "What does a red line or steak mean in golf?",
+    question2: "What does a red line or stake mean in golf?",
     answer1: "Out of bounds",
     answer2: "Free drop",
     answer3: "Hazard area",
@@ -17,7 +17,7 @@ var questionArray = [
 
 },
 {
-    question3: "What does a white line or steak mean in golf?",
+    question3: "What does a white line or stake mean in golf?",
     answer1: "Free ball drop",
     answer2: "Water area",
     answer3: "Hazard section",
