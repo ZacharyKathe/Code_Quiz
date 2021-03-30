@@ -48,8 +48,9 @@ var questionArray = [
 ]
 
 var score = 0;
-var lost_time = 0000;
 var incorrect = 0;
+
+var countdown = document.getElementById('gameClock')
 
 var nextButton = document.getElementById("next")
 console.log(nextButton)
@@ -63,6 +64,10 @@ console.log(slot_2)
 var slot_3 = document.getElementById("answer_3")
 var slot_4 = document.getElementById("answer_4")
 
+
+
+
+
 ///starting the game
 
 btnToPlay.addEventListener("click", function(event){
@@ -71,6 +76,16 @@ btnToPlay.addEventListener("click", function(event){
     slot_2.innerHTML = questionArray[0].answer2;
     slot_3.innerHTML = questionArray[0].answer3;
     slot_4.innerHTML = questionArray[0].answer4;
+    var timeRemaining = 20;
+var timer = setInterval(function(){
+  if (timeRemaining <=0){
+    clearInterval(timer);
+    countdown.innerHTML = "All out of Time";
+  }else {
+    countdown.innerHTML = timeRemaining + " seconds left"
+  }
+  timeRemaining -= 1;
+}, 1000)
     event.stopPropagation();
 })
  //testing question 2
